@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+@model Dish
+  <h1>
+   @await Html.PartialAsync("_Nav")
+</h1>
+<h1>@Model.Name by @Model.Chef</h1>
+
+<hr>
+<p>@Model.Description</p>
+<h3><strong>Tastiness: </strong>@Model.Tastines</h3>
+<div class="block6">
+
+
+<form method="POST" asp-controller="Home" asp-action="EliminarDishe" asp-route-id="@Model.Id">
+    <button class="btn btn-danger">
+        Eliminar
+    </button>
+</form>
+<a asp-controller="Home" asp-action="FormularioEditarDish" asp-route-id="@Model.Id">
+    <button class="btn btn-warning">
+        Editar
+    </button>
+</a>
+</div>

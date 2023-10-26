@@ -1,0 +1,23 @@
+﻿
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+@model List<Dish>
+<div class="text-center">
+  <h1>Welcom to CRUDelicioso</h1>
+  <h1>
+   @await Html.PartialAsync("_Nav")
+</h1>
+
+<div class="platos">
+  <h2>Check out some recent dishes</h2>
+  @foreach (Dish plato in @Model)
+            {
+<p><a asp-controller="Home" 
+        asp-action="Dashboard" 
+        asp-route-Id="@plato.Id">@plato.Name</a> by @plato.Chef</p>
+            }
+
+</div>
+  
+
+</div>

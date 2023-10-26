@@ -1,0 +1,31 @@
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    margin-left: 27vw;
+    
+}
+
+.nav-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: medium;
+   
+}
+
+.divider {
+    border-left: 1px solid #000;
+    height: 20px;
+    
+}
+
+.block0{
+    display: flex;
+}
+.block6{
+    display: flex;
+    justify-content: space-between;
+}

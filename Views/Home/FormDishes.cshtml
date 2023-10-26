@@ -1,0 +1,58 @@
+<div class="text-center">
+  <h1>Add a new Dish!</h1>
+  <h1>
+   @await Html.PartialAsync("_Nav")
+</h1>
+  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+@model Dish
+
+
+<form method="POST" action="/new/dishe" class="block0">
+       <div class="block1">
+        
+      
+        <div>
+                <label asp-for="Name">Name</label>
+                <input type="text" asp-for="Name">
+                <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+                <label asp-for="Chef">Chef</label>
+                <input type="text" asp-for="Chef">
+                <span asp-validation-for="Chef"></span>
+        </div>
+         </div>
+
+         <div class="block2">
+
+
+         
+        <div>
+                <label asp-for="Tastines">Tastines</label>
+                <input type="number" asp-for="Tastines">
+                <span asp-validation-for="Tastines"></span>
+        </div>
+
+        </div>
+
+
+        <div class="block3">
+
+
+       
+        <div>
+                <label asp-for="Description">Description</label>
+                <textarea type="text" asp-for="Description"> </textarea>
+                <span asp-validation-for="Description"></span>
+        </div>
+
+        <div>
+@*                 <input type="hidden" asp-for="Director_Id" value="@Context.Session.GetInt32("Id")">
+ *@
+        </div>
+
+        <button>Add Dishe</button>
+         </div>
+      
+</form>
